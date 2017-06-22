@@ -1,5 +1,5 @@
 require 'json'
-require 'shellwords'
+require 'Shellwords'
 
 f = File.read("./love_ZT.json")
 
@@ -24,15 +24,15 @@ sentencesQ = sentences.map{ |e| %{"#{e}"} }
 
 len = sentencesQ.length - 1
 
-Dir.mkdir("love_ZS")
+#Dir.mkdir("love_ZS")
 
-for i in (0..len).to_a
-	cmd1 = "trans " + source_lang + ":" + target_lang + " " + sentencesQ[i-1] + ' -no-ansi ' + engineStr
-	#puts(cmd1)
+contents.each do |k,v|
+	cmd1 = "trans " + source_lang + ":" + target_lang + " " + %{"#{v}"} + ' -no-ansi ' + engineStr
+	puts(cmd1)
 	#system(cmd1)
 
-	fileName = "./love_ZS/" + (i+1).to_s + ".txt"
-	puts(i)
+	fileName = "./love_ZS/" + k.to_s + ".txt"
+	#puts(k)
 	cmd2 = cmd1 + " > " + fileName
 	system(cmd2)
 	#puts(cmd2)
