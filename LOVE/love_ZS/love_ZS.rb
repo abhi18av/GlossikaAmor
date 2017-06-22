@@ -1,7 +1,7 @@
 require 'json'
 require 'Shellwords'
 
-f = File.read("./love_ZT.json")
+f = File.read("../love_ZT.json")
 
 source_lang = "zh-TW"
 target_lang = "zh-CN"
@@ -31,7 +31,7 @@ contents.each do |k,v|
 	puts(cmd1)
 	#system(cmd1)
 
-	fileName = "./love_ZS/" + k.to_s + ".txt"
+	fileName = k.to_s + ".txt"
 	#puts(k)
 	cmd2 = cmd1 + " > " + fileName
 	system(cmd2)
