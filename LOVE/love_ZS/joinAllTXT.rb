@@ -21,7 +21,6 @@ end
 
 for i in 0...(contents.length)
 
-puts("\n")
 temp = contents[i]
 puts temp
 puts("\n")
