@@ -26,3 +26,11 @@ for x in sentencesAll
 #puts s
 
 end 
+
+
+
+
+
+(0..99).step(2).to_a
+
+
