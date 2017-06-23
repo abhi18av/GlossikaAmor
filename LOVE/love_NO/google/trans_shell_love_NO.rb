@@ -1,10 +1,10 @@
 require 'json'
 require 'Shellwords'
 
-f = File.read("../love_ZT.json")
+f = File.read("../../love_DA.json")
 
-source_lang = "zh-TW"
-target_lang = "zh-CN"
+source_lang = "da"
+target_lang = "no"
 
 engine = "google"
 engineStr = " -engine=" + engine
@@ -27,7 +27,7 @@ len = sentencesQ.length - 1
 #Dir.mkdir("love_ZS")
 
 contents.each do |k,v|
-	cmd1 = "trans " + source_lang + ":" + target_lang + " " + %{"#{v}"} + ' -no-ansi ' + engineStr
+	cmd1 = "trans " + source_lang + ":" + target_lang + " " + %{"#{v}"} + ' -no-ansi ' + engineStr + " -b"
 	puts(cmd1)
 	#system(cmd1)
 

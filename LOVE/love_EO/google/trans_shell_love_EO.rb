@@ -1,10 +1,10 @@
 require 'json'
 require 'Shellwords'
 
-f = File.read("../love_DA.json")
+f = File.read("../../love_EN.json")
 
-source_lang = "da"
-target_lang = "no"
+source_lang = "en"
+target_lang = "eo"
 
 engine = "google"
 engineStr = " -engine=" + engine
